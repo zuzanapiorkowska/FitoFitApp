@@ -14,5 +14,5 @@ export const navigationItems: NavItemProps[] = [
   { name: "My workouts", href: "/workouts", icon: <ListIcon /> },
   { name: "Stats", href: "/stats", icon: <StatsIcon /> },
   { name: "Add workout", href: "/add", icon: <AddIcon /> },
-  { name: "Check weather", href: "/weather", icon: <WeatherIcon /> },
+  { name: "Weather", href: "/weather", icon: <WeatherIcon /> },
 ];

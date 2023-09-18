@@ -13,7 +13,7 @@ export const ForecastItemList = ({ weatherData }: ForecastListProps) => {
         value={weatherData.data.temp}
         icon={<TemperatureIcon />}
         unit='&#8451;'
-        dataTest='temperture'
+        dataTest='temperature'
       />
       <ForecastItem
         label='Humidity'
@@ -27,7 +27,7 @@ export const ForecastItemList = ({ weatherData }: ForecastListProps) => {
         value={weatherData.data.pressure}
         icon={<PressureIcon />}
         unit='hPa'
-        dataTest='temperture'
+        dataTest='pressure'
       />
     </ul>
   );

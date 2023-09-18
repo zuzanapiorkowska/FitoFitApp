@@ -1,6 +1,5 @@
 import React from "react";
 import { NextArrowIcon } from "../../Carousel/icons/NextArrowIcon";
-import { CheckWeatherButtonProps } from "../Weather.interface";
 
 export const CheckWetherButton = () => {
   return (
