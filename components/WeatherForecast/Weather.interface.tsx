@@ -1,8 +1,7 @@
 import { ChangeEvent, HTMLAttributes, ReactNode } from "react";
-export interface CoordinateInputProps extends HTMLAttributes<HTMLInputElement> {
-  id: string;
+export interface CoordinateInputProps
+  extends Pick<HTMLAttributes<HTMLInputElement>, "id" | "onChange"> {
   label: string;
-  dataTest: string;
   errorMessage?: string;
   onChange(
     e: ChangeEvent<HTMLInputElement> & {
@@ -36,14 +35,6 @@ export interface ForecastItemProps {
 }
 
 export interface ForecastItemsListProps {
-  items: ForecastItemProps;
-}
-
-export interface CheckWeatherButtonProps {
-  coords: Coordinates;
-}
-
-export interface ForecastListProps {
   weatherData: DisplayedWeatherData;
 }
 

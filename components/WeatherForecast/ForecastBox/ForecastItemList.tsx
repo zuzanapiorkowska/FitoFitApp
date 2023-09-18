@@ -2,10 +2,10 @@ import React from "react";
 import { HumidityIcon } from "../icons/HumidityIcon";
 import { PressureIcon } from "../icons/PressureIcon";
 import { TemperatureIcon } from "../icons/TemperatureIcon";
-import { ForecastListProps } from "../Weather.interface";
+import { ForecastItemsListProps } from "../Weather.interface";
 import { ForecastItem } from "./ForecastItem";
 
-export const ForecastItemList = ({ weatherData }: ForecastListProps) => {
+export const ForecastItemsList = ({ weatherData }: ForecastItemsListProps) => {
   return (
     <ul className='flex flex-row flex-wrap h-full min-h-fit w-full gap-4 sm:gap-8 items-center justify-center'>
       <ForecastItem

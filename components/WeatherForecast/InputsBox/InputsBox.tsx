@@ -42,7 +42,6 @@ export const InputsBox = ({ onCheckWeatherButtonClick }: InputBoxProps) => {
           <CoordinateInput
             id='latitude'
             label='Latitude'
-            dataTest='lat-input'
             errorMessage={errors.lat && errors.lat.message}
             {...register("lat", {
               required: "Lat is required",
@@ -63,7 +62,6 @@ export const InputsBox = ({ onCheckWeatherButtonClick }: InputBoxProps) => {
           <CoordinateInput
             id='longitude'
             label='Longitude'
-            dataTest='lon-input'
             errorMessage={errors.lon && errors.lon.message}
             {...register("lon", {
               required: "Lon is required",

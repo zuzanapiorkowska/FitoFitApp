@@ -1,6 +1,6 @@
 import React from "react";
 import { ForecastListProps } from "../Weather.interface";
-import { ForecastItemList } from "./ForecastItemList";
+import { ForecastItemsList } from "./ForecastItemList";
 
 export default function ForecastBox({ weatherData }: ForecastListProps) {
   return (
@@ -22,7 +22,7 @@ export default function ForecastBox({ weatherData }: ForecastListProps) {
           </span>
         </p>
       </div>
-      <ForecastItemList weatherData={weatherData} />
+      <ForecastItemsList weatherData={weatherData} />
     </div>
   );
 }
