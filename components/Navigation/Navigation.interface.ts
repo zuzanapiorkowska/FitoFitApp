@@ -1,8 +1,7 @@
-import { ReactNode } from "react";
+import { AnchorHTMLAttributes, ReactNode } from "react";
 
-export interface NavItemProps {
+export interface NavItemProps extends Pick<AnchorHTMLAttributes<HTMLAnchorElement>, "href"> {
   name: string;
-  href: string;
   icon: ReactNode;
 }
 

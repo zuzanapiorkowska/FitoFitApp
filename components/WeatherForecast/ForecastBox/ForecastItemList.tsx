@@ -2,32 +2,32 @@ import React from "react";
 import { HumidityIcon } from "../icons/HumidityIcon";
 import { PressureIcon } from "../icons/PressureIcon";
 import { TemperatureIcon } from "../icons/TemperatureIcon";
-import { ForecastItemsListProps } from "../Weather.interface";
+import { ForecastItemsListProps, WeatherPart } from "../Weather.interface";
 import { ForecastItem } from "./ForecastItem";
 
 export const ForecastItemsList = ({ weatherData }: ForecastItemsListProps) => {
   return (
     <ul className='flex flex-row flex-wrap h-full min-h-fit w-full gap-4 sm:gap-8 items-center justify-center'>
       <ForecastItem
-        label='Temperture'
+        label={WeatherPart.TEMPERATURE}
         value={weatherData.data.temp}
         icon={<TemperatureIcon />}
         unit='&#8451;'
-        dataTest='temperature'
+        dataTest={WeatherPart.TEMPERATURE.toLowerCase()}
       />
       <ForecastItem
-        label='Humidity'
+        label={WeatherPart.HUMIDITY}
         value={weatherData.data.humidity}
         icon={<HumidityIcon />}
         unit='%'
-        dataTest='humidity'
+        dataTest={WeatherPart.HUMIDITY.toLowerCase()}
       />
       <ForecastItem
-        label='Pressure'
+        label={WeatherPart.PRESSURE}
         value={weatherData.data.pressure}
         icon={<PressureIcon />}
         unit='hPa'
-        dataTest='pressure'
+        dataTest={WeatherPart.PRESSURE.toLowerCase()}
       />
     </ul>
   );

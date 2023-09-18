@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { AnchorHTMLAttributes } from "react";
 
 type CarouselButtonType = "prev" | "next";
 export interface CarouselButtonProps {
@@ -6,12 +6,11 @@ export interface CarouselButtonProps {
   onClick(): void;
 }
 
-export interface CarouselItemProps {
+export interface CarouselItemProps extends Pick<AnchorHTMLAttributes<HTMLAnchorElement>, "href"> {
   bgClassName: string;
   title: string;
   subtitle: string;
   linkText: string;
-  href: string;
 }
 
 export interface IndicatorsProps {

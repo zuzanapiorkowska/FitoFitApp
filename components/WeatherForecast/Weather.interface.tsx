@@ -41,3 +41,9 @@ export interface ForecastItemsListProps {
 export interface InputBoxProps {
   onCheckWeatherButtonClick(e: DisplayedWeatherData): void;
 }
+
+export enum WeatherPart {
+  TEMPERATURE = "Temperature",
+  HUMIDITY = "Humidity",
+  PRESSURE = "Pressure",
+}
