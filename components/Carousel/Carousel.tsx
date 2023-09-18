@@ -5,7 +5,7 @@ import { CarouselButton } from "./CarouselButton";
 import { Carouseltem } from "./Carouseltem";
 import { carouselItems } from "./utils";
 import classNames from "classnames";
-import { Indicators } from "./Indicators";
+import { CarouselIndicators } from "./CarouselIndicators";
 
 export const Carousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 4000 })]);
@@ -16,7 +16,7 @@ export const Carousel = () => {
   const resetTimer = () => emblaApi.plugins().autoplay.reset();
 
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
-  const [selecteIdx, setSelextedIndex] = useState<number>(0);
+  const [selecteIdx, setSelectedIndex] = useState<number>(0);
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -25,7 +25,7 @@ export const Carousel = () => {
   const onItemChange = () => {
     if (!emblaApi) return;
 
-    setSelextedIndex(emblaApi.selectedScrollSnap());
+    setSelectedIndex(emblaApi.selectedScrollSnap());
   };
 
   useEffect(() => {
@@ -38,7 +38,7 @@ export const Carousel = () => {
 
   return (
     <div className='flex w-full relative h-full'>
-      <Indicators
+      <CarouselIndicators
         scrollSnaps={scrollSnaps}
         selectedIdx={selecteIdx}
         onClick={idx => {

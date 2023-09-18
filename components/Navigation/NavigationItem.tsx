@@ -21,10 +21,10 @@ export const NavigationItem = ({
         { "rounded-l-md": isFirstItem, "rounded-r-md": isLastItem }
       )}
       href={href}>
-      {name}{" "}
-      <div className='h-6 w-6 pl-2 hidden lg:inline' aria-hidden>
+      <div className='h-6 w-6 pr-2 hidden lg:inline' aria-hidden>
         {icon}
       </div>
+      {name}
     </Link>
   );
 };

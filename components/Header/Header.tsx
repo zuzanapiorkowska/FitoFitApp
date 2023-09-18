@@ -6,7 +6,7 @@ import { navigationItems } from "../Navigation/utils";
 
 export const Header = () => {
   return (
-    <div className='flex w-full h-fit text-green-400 px-8 py-4'>
+    <div className='flex w-full h-fit text-green-400 px-8 py-4 items-center gap-2'>
       <Link
         className='rounded-full bg-violetDark p-2 flex items-center h-fit min-w-fit justify-center'
         href='/'
@@ -20,6 +20,7 @@ export const Header = () => {
           className='w-10 h-10 pt-1'
         />
       </Link>
+      <span className='font-bold text-violetDark text-lg'>FitoFit</span>
       <Navigation items={navigationItems} />
     </div>
   );

@@ -4,7 +4,7 @@ import { NavigationItem } from "./NavigationItem";
 
 export const Navigation = ({ items }: NavigationProps) => {
   return (
-    <nav className='w-full font-bold flex items-center justify-between gap-1 pl-8 text-md md:text-lg text-green-400'>
+    <nav className='w-full h-full font-bold flex items-center justify-between gap-1 pl-8 text-md md:text-lg text-green-400'>
       {items.map((item, idx) => (
         <NavigationItem
           {...item}

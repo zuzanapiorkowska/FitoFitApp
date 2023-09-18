@@ -9,10 +9,10 @@ export const navigationItems: NavItemProps[] = [
   {
     name: "Home",
     href: "/",
-    icon: HomeIcon(),
+    icon: <HomeIcon />,
   },
-  { name: "My workouts", href: "/workouts", icon: ListIcon() },
-  { name: "Stats", href: "/stats", icon: StatsIcon() },
-  { name: "Add workout", href: "/add", icon: AddIcon() },
-  { name: "Check weather", href: "/weather", icon: WeatherIcon() },
+  { name: "My workouts", href: "/workouts", icon: <ListIcon /> },
+  { name: "Stats", href: "/stats", icon: <StatsIcon /> },
+  { name: "Add workout", href: "/add", icon: <AddIcon /> },
+  { name: "Check weather", href: "/weather", icon: <WeatherIcon /> },
 ];

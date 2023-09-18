@@ -6,9 +6,12 @@ module.exports = {
         violetDark: "#6d6875",
         violetDarkHover: "#534f5a",
         main: "#e5989b",
+        mainDark: "#c9787b",
         violetExtraDark:"#33364e",
         violetExtraDarkHover:"#292a3e",
         pinkDark: "#b5838d",
+        salmon: "#ffb4a2",
+        salmonLight: "#ffcdb2",
         indicator: "rgba(255, 255, 255, 0.5)"
       },
       backgroundImage: {
@@ -22,5 +25,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar')],
 };
