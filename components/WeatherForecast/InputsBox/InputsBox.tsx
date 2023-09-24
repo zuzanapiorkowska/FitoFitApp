@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { PointerIcon } from "../icons/PointerIcon";
+import { PointerIcon } from "../../icons/PointerIcon";
 import { Coordinates, InputBoxProps } from "../Weather.interface";
 import { CheckWetherButton } from "./CheckWetherButton";
 import { CoordinateInput } from "./CoordinateInput";

@@ -1,5 +1,5 @@
 import React from "react";
-import { NextArrowIcon } from "../../Carousel/icons/NextArrowIcon";
+import { NextArrowIcon } from "../../icons/NextArrowIcon";
 
 export const CheckWetherButton = () => {
   return (

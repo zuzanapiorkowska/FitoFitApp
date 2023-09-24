@@ -1,8 +1,8 @@
 import classNames from "classnames";
 import React from "react";
 import { CarouselButtonProps } from "./Carousel.interface";
-import { NextArrowIcon } from "./icons/NextArrowIcon";
-import { PrevArrowIcon } from "./icons/PrevArrowIcon";
+import { NextArrowIcon } from "../icons/NextArrowIcon";
+import { PrevArrowIcon } from "../icons/PrevArrowIcon";
 
 export const CarouselButton = ({ onClick, type }: CarouselButtonProps) => {
   const isPrev = type === "prev";

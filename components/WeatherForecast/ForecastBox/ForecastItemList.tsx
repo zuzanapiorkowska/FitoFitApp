@@ -1,7 +1,7 @@
 import React from "react";
-import { HumidityIcon } from "../icons/HumidityIcon";
-import { PressureIcon } from "../icons/PressureIcon";
-import { TemperatureIcon } from "../icons/TemperatureIcon";
+import { HumidityIcon } from "../../icons/HumidityIcon";
+import { PressureIcon } from "../../icons/PressureIcon";
+import { TemperatureIcon } from "../../icons/TemperatureIcon";
 import { ForecastItemsListProps, WeatherPart } from "../Weather.interface";
 import { ForecastItem } from "./ForecastItem";
 
