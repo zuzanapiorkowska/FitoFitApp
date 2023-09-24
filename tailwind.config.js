@@ -23,6 +23,9 @@ module.exports = {
       flex: {
         carouselItem: "0 0 100%",
       },
+      fontSize: {
+        workoutItemStat: "0.6rem"
+      }
     },
   },
   plugins: [require('tailwind-scrollbar')],
