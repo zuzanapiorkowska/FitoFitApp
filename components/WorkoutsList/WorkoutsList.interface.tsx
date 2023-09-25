@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
-export enum Training {
-  CYCLING = "cyclign",
+export enum WorkoutType {
+  CYCLING = "cycling",
   SWIMMING = "swimming",
   RUNNING = "running",
 }
@@ -19,7 +19,7 @@ export interface IPartialWorkout {
 
 export interface IWorkout {
   id: string;
-  date: string;
+  date: Date;
   parts: IPartialWorkout[];
   notes?: string;
 }

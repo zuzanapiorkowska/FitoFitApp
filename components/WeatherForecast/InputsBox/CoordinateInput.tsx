@@ -12,11 +12,11 @@ export function CoordinateInput({ id, label, onChange, errorMessage }: Coordinat
         <input
           type='text'
           placeholder='0'
-          className='px-2 py-1 w-32 rounded-md bg-white text-pinkDark focus:outline focus:outline-2 focus:outline-main focus:ring-0 placeholder:text-salmonLight focus:ring-4 focus:ring-salmonLight'
+          className='px-2 py-1 w-32 rounded-md bg-white bg-opacity-50 text-pinkDark focus:outline focus:outline-2 focus:outline-main focus:ring-0 placeholder:text-salmonLight focus:ring-4 focus:ring-salmonLight'
           id={id}
           onChange={onChange}
         />
-        {errorMessage && <p className='text-red-500 text-xs absolute -bottom-5'>{errorMessage}</p>}
+        {errorMessage && <p className='text-red-600 text-2xs absolute -bottom-5'>{errorMessage}</p>}
       </div>
     </div>
   );

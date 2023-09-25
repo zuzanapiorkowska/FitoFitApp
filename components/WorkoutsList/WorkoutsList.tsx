@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import { Accordion } from "./Accordion";
 import { pastWorkoutsMock } from "./utils";
 import { WorkoutItem } from "./WorkoutItem";
 import { IWorkout } from "./WorkoutsList.interface";

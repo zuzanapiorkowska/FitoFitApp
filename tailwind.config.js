@@ -24,7 +24,7 @@ module.exports = {
         carouselItem: "0 0 100%",
       },
       fontSize: {
-        workoutItemStat: "0.6rem"
+        "2xs": "0.6rem"
       }
     },
   },

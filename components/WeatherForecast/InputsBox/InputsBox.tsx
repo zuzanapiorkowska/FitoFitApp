@@ -33,7 +33,7 @@ export const InputsBox = ({ onCheckWeatherButtonClick }: InputBoxProps) => {
     <form
       onSubmit={handleSubmit(onSubmit)}
       noValidate
-      className='flex flex-col w-full md:flex-row lg:gap-8 bg-white bg-opacity-40 min-w-fit p-4 lg:p-8 rounded-md justify-between items-center'>
+      className='flex flex-col w-full md:flex-row lg:gap-8 bg-white bg-opacity-20 min-w-fit p-4 lg:p-8 rounded-md justify-between items-center'>
       <div className='flex items-center gap-4 flex-col sm:flex-row'>
         <div className='h-10 w-10'>
           <PointerIcon />

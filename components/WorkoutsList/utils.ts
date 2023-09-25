@@ -1,7 +1,7 @@
 export const pastWorkoutsMock = [
   {
     id: "1",
-    date: "2022-04-10",
+    date: new Date("2022-04-10"),
     parts: [
       {
         discipline: "running",
@@ -13,7 +13,7 @@ export const pastWorkoutsMock = [
   },
   {
     id: "2",
-    date: "2022-04-11",
+    date: new Date("2022-04-11"),
     parts: [
       {
         discipline: "swimming",

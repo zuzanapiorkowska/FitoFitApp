@@ -11,7 +11,7 @@ export const WorkoutItem = ({ workout, onRemoveClick }: WorkoutItemProps) => {
     <Accordion
       title={
         <div className='flex items-center justify-between w-full text-sm'>
-          <span>{workout.date}</span>
+          <span>{workout.date.toString()}</span>
           <span className='flex gap-2'>
             <Link href={`/edit/${workout.id}`}>
               <div className='h-4 w-4'>
@@ -35,7 +35,7 @@ export const WorkoutItem = ({ workout, onRemoveClick }: WorkoutItemProps) => {
                 </span>
               </p>
               <p className='font-bold'>
-                <span className='text-workoutItemStat text-violetExtraDark'>Distance: </span>
+                <span className='text-2xs text-violetExtraDark'>Distance: </span>
                 <span className='text-violetDark'>{distanceInMeters / 1000} km</span>
               </p>
               <p className='font-bold'>
@@ -49,7 +49,7 @@ export const WorkoutItem = ({ workout, onRemoveClick }: WorkoutItemProps) => {
             </div>
           );
         })}
-        <div className='bg-violetDark bg-opacity-20 rounded-md p-2 text-workoutItemStat'>
+        <div className='bg-violetDark bg-opacity-20 rounded-md p-2 text-2xs'>
           <span className='text-violetExtraDark'>Notes:</span>
           <span className='font-normal'> {workout.notes}</span>
         </div>
