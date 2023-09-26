@@ -10,6 +10,7 @@ export const NavigationItem = ({
   isFirstItem,
   isLastItem,
   isSpecial,
+  onClick,
 }: NavListItemProps) => {
   return (
     <Link
@@ -20,7 +21,8 @@ export const NavigationItem = ({
           : "bg-violetDark hover:bg-violetDarkHover",
         { "rounded-l-md": isFirstItem, "rounded-r-md": isLastItem }
       )}
-      href={href}>
+      href={href}
+      onClick={onClick}>
       <div className='h-6 w-6 pr-2 hidden md:inline' aria-hidden>
         {icon}
       </div>

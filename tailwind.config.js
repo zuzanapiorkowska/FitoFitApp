@@ -7,26 +7,32 @@ module.exports = {
         violetDarkHover: "#534f5a",
         main: "#e5989b",
         mainDark: "#c9787b",
-        violetExtraDark:"#33364e",
-        violetExtraDarkHover:"#292a3e",
+        violetExtraDark: "#33364e",
+        violetExtraDarkHover: "#292a3e",
         pinkDark: "#b5838d",
         salmon: "#ffb4a2",
         salmonLight: "#ffcdb2",
-        indicator: "rgba(255, 255, 255, 0.5)"
+        indicator: "rgba(255, 255, 255, 0.5)",
       },
       backgroundImage: {
         pattern: "url('https://www.transparenttextures.com/patterns/cubes.png')",
-        bgCarousel1: "linear-gradient(to left, rgba(244, 172, 183, 0.9), rgba(109, 104, 117, 0.7)), url(/bgCarousel1.png)",
-        bgCarousel2: "linear-gradient(to left, rgba(244, 172, 183, 0.9), rgba(109, 104, 117, 0.7)), url(/bgCarousel2.png)",
-        bgCarousel3: "linear-gradient(to left, rgba(244, 172, 183, 0.9), rgba(109, 104, 117, 0.8)), url(/bgCarousel3.png)",
+        bgCarousel1:
+          "linear-gradient(to left, rgba(244, 172, 183, 0.9), rgba(109, 104, 117, 0.7)), url(/bgCarousel1.png)",
+        bgCarousel2:
+          "linear-gradient(to left, rgba(244, 172, 183, 0.9), rgba(109, 104, 117, 0.7)), url(/bgCarousel2.png)",
+        bgCarousel3:
+          "linear-gradient(to left, rgba(244, 172, 183, 0.9), rgba(109, 104, 117, 0.8)), url(/bgCarousel3.png)",
       },
       flex: {
         carouselItem: "0 0 100%",
       },
       fontSize: {
-        "2xs": "0.6rem"
-      }
+        "2xs": "0.6rem",
+      },
+      screens: {
+        xs: "480px",
+      },
     },
   },
-  plugins: [require('tailwind-scrollbar')],
+  plugins: [require("tailwind-scrollbar")],
 };

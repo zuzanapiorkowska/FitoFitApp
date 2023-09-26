@@ -6,7 +6,7 @@ import { navigationItems } from "../Navigation/utils";
 
 export const Header = () => {
   return (
-    <div className='flex w-full h-fit text-green-400 px-8 py-4 items-center gap-2'>
+    <div className='flex w-full h-fit text-green-400 px-8 py-4 items-center gap-2 justify-between'>
       <Link href='/' aria-label='Go to homepage' className='flex items-center justify-center gap-2'>
         <div className='rounded-full bg-violetDark p-2 flex items-center h-fit min-w-fit justify-center'>
           <Image

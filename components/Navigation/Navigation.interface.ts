@@ -6,9 +6,10 @@ export interface NavItemProps extends Pick<AnchorHTMLAttributes<HTMLAnchorElemen
 }
 
 export interface NavListItemProps extends NavItemProps {
-  isFirstItem: boolean;
-  isLastItem: boolean;
+  isFirstItem?: boolean;
+  isLastItem?: boolean;
   isSpecial: boolean;
+  onClick?(): void;
 }
 export interface NavigationProps {
   items: NavItemProps[];
