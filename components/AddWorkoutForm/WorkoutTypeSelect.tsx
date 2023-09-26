@@ -1,11 +1,9 @@
 import classNames from "classnames";
-import { SelectHTMLAttributes, useEffect, useRef, useState } from "react";
-import { WorkoutType } from "../WorkoutsList/WorkoutsList.interface";
 import { InputField } from "./inputs/InputField";
-import { inputClassName } from "./utils";
-import { createPortal } from "react-dom";
 import { useClickOutside } from "./hooks/useClickOutside";
 import { WorkoutTypeSelectProps } from "./AddWorkoutForm.interface";
+import { useRef } from "react";
+import { inputClassName } from "../../utils/classNames";
 
 export function WorkoutTypeSelect({
   disciplines,
