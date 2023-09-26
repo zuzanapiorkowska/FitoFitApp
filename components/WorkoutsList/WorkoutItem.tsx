@@ -4,14 +4,14 @@ import { EditIcon } from "../icons/EditIcon";
 import { TrashIcon } from "../icons/TrashIcon";
 import { Accordion } from "./Accordion";
 import { TimeParts } from "./utils";
-import { IWorkout, WorkoutItemProps } from "./WorkoutsList.interface";
+import { WorkoutItemProps } from "./WorkoutsList.interface";
 
 export const WorkoutItem = ({ workout, onRemoveClick }: WorkoutItemProps) => {
   return (
     <Accordion
       title={
         <div className='flex items-center justify-between w-full text-sm'>
-          <span>{workout.date.toString()}</span>
+          <span>{workout.date.toString().slice(0, 10)}</span>
           <span className='flex gap-2'>
             <Link href={`/edit/${workout.id}`}>
               <div className='h-4 w-4'>

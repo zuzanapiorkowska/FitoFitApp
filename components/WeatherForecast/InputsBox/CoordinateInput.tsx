@@ -12,7 +12,7 @@ export function CoordinateInput({ id, label, onChange, errorMessage }: Coordinat
         <input
           type='text'
           placeholder='0'
-          className='px-2 py-1 w-32 rounded-md bg-white bg-opacity-50 text-pinkDark focus:outline focus:outline-2 focus:outline-main focus:ring-0 placeholder:text-salmonLight focus:ring-4 focus:ring-salmonLight'
+          className='px-2 py-1 w-32 rounded-md bg-white bg-opacity-50 text-pinkDark focus:outline focus:outline-2 focus:outline-main focus:ring-0 placeholder:text-pinkDark placeholder:text-opacity-40 focus:ring-4 focus:ring-salmonLight'
           id={id}
           onChange={onChange}
         />

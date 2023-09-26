@@ -1,15 +1,15 @@
 import React, { PropsWithChildren } from "react";
 import { useFormContext } from "react-hook-form";
-import { InputFieldProps } from "./AddWorkoutForm.interface";
+import { InputFieldProps } from "../AddWorkoutForm.interface";
 
 export const InputField = ({
-  htmlFor,
   label,
   errorMessage,
   children,
+  htmlFor,
 }: PropsWithChildren<InputFieldProps>) => {
   return (
-    <div className='flex flex-col text-xs gap-1'>
+    <div className='flex flex-col text-xs gap-1.5'>
       <label htmlFor={htmlFor}>{label}</label>
       {children}
       {!!errorMessage && (

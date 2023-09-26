@@ -7,14 +7,14 @@ export const carouselItems = [
     title: "Never forget what you've achieved",
     subtitle: "Never forget what you've achieved",
     linkText: "Go to trainings",
-    href: "/history",
+    href: "/myworkouts",
   },
   {
     bgClassName: "bg-bgCarousel2",
     title: "Constantly monitor your results",
     subtitle: "Measure your progress",
     linkText: "See stats",
-    href: "/stats",
+    href: "/myworkouts",
   },
   {
     bgClassName: "bg-bgCarousel3",

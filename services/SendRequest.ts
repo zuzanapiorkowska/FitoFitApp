@@ -1,5 +1,5 @@
 import axios from "axios";
-import { IWorkout, IStandardResponse} from "../interfaces/Workout";
+import { IWorkout, IStandardResponse } from "../interfaces/Workout";
 
 export class SendRequest {
   async getAllTrainings(): Promise<IWorkout[]> {
@@ -33,7 +33,7 @@ export class SendRequest {
       const response = await axios.post(url, { workout: workout });
       const ConfirmationAnswer: IWorkout = response.data;
       return ConfirmationAnswer;
-    } catch (err:any) {
+    } catch (err: any) {
       throw new Error(err.message + `Cannot connect to ${url}`);
     }
   }
@@ -45,7 +45,7 @@ export class SendRequest {
       const response = await axios.put(url, { workout: workout });
       const ConfirmationAnswer: IStandardResponse = response.data;
       return ConfirmationAnswer;
-    } catch (err:any) {
+    } catch (err: any) {
       throw new Error(err.message + `Cannot connect to ${url}`);
     }
   }
