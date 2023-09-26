@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from "react";
-import { InputFieldProps } from "../AddWorkoutForm.interface";
+import { InputFieldProps } from "../WorkoutForm.interface";
 
 export const InputField = ({
   label,

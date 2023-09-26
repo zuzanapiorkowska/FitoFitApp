@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { InputField } from "./inputs/InputField";
 import { useClickOutside } from "./hooks/useClickOutside";
-import { WorkoutTypeSelectProps } from "./AddWorkoutForm.interface";
+import { WorkoutTypeSelectProps } from "./WorkoutForm.interface";
 import { useRef } from "react";
 import { inputClassName } from "../../utils/classNames";
 
