@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useFormContext, UseFormRegister } from "react-hook-form";
 import { TimeParts } from "../../WorkoutsList/utils";
 import { InputField } from "./InputField";
-import { inputClassName } from "../utils";
+import { handleMinusKeyDown, inputClassName } from "../utils";
 
 interface DurationInputProps {
   idx: number;
@@ -26,7 +26,7 @@ export function DurationInput({ idx, durationToEdit }: DurationInputProps) {
 
   useEffect(() => {
     const timeInSeconds = duration.hours * 3600 + duration.minutes * 60 + duration.seconds;
-    console.log(timeInSeconds);
+    console.log(duration);
     if (timeInSeconds > 0) {
       setValue(`parts.${idx}.durationInSeconds`, timeInSeconds, { shouldValidate: true });
     }
@@ -52,6 +52,8 @@ export function DurationInput({ idx, durationToEdit }: DurationInputProps) {
             setDuration(prev => ({ ...prev, hours: value }));
           }}
           defaultValue={durationToEdit && duration.hours}
+          min={0}
+          onKeyDown={handleMinusKeyDown}
         />
         <span>:</span>
         <input
@@ -64,6 +66,8 @@ export function DurationInput({ idx, durationToEdit }: DurationInputProps) {
             setDuration(prev => ({ ...prev, minutes: value }));
           }}
           defaultValue={durationToEdit && duration.minutes}
+          min={0}
+          onKeyDown={handleMinusKeyDown}
         />
         <span>:</span>
         <input
@@ -76,11 +80,17 @@ export function DurationInput({ idx, durationToEdit }: DurationInputProps) {
             setDuration(prev => ({ ...prev, seconds: value }));
           }}
           defaultValue={durationToEdit && duration.seconds}
+          min={0}
+          onKeyDown={handleMinusKeyDown}
         />
         <input
           hidden
           {...register(`parts.${idx}.durationInSeconds`, {
             required: "Duration is required",
+            min: {
+              value: 1,
+              message: "Min duration required is 1s",
+            },
           })}
         />
       </div>
