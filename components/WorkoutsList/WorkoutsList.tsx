@@ -20,8 +20,29 @@ export const WorkoutsList = () => {
     }
   }, []);
 
+  const [isMockInfoDisplayed, setIsMockInfoDisplayed] = useState<boolean>(false);
+
+  useEffect(() => {
+    const areMocksDisplayed = myWorkouts.find(workout => workout.id === "1" || workout.id === "2");
+    if (areMocksDisplayed) {
+      setIsMockInfoDisplayed(true);
+    } else {
+      setIsMockInfoDisplayed(false);
+    }
+  }, [myWorkouts]);
+
   return (
-    <div className={classNames("flex flex-col gap-2 max-h-full h-full pr-1", scrollbarClassName)}>
+    <div
+      className={classNames(
+        "flex flex-col gap-2 max-h-full h-full pr-1 max-w-[360px]",
+        scrollbarClassName
+      )}>
+      {isMockInfoDisplayed && (
+        <p className='bg-white bg-opacity-20 p-2 rounded-md text-xs'>
+          To present the operation of the application, demo training sessions are displayed. You can
+          add your own sessions and remove demo workout items.
+        </p>
+      )}
       {myWorkouts.length > 0 &&
         myWorkouts.map((workout, idx) => (
           <WorkoutItem

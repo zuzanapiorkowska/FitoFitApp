@@ -1,6 +1,4 @@
-import Link from "next/link";
-import React, { useState } from "react";
-import { EditIcon } from "../icons/EditIcon";
+import React from "react";
 import { TrashIcon } from "../icons/TrashIcon";
 import { Accordion } from "./Accordion";
 import { TimeParts } from "./utils";
@@ -13,11 +11,12 @@ export const WorkoutItem = ({ workout, onRemoveClick }: WorkoutItemProps) => {
         <div className='flex items-center justify-between w-full text-sm'>
           <span>{workout.date.toString().slice(0, 10)}</span>
           <span className='flex gap-2'>
-            <Link href={`/edit/${workout.id}`}>
+            {/* TODO: enable editing trainings */}
+            {/* <Link href={`/edit/${workout.id}`}>
               <div className='h-4 w-4'>
                 <EditIcon />
               </div>
-            </Link>
+            </Link> */}
             <button className='h-4 w-4' onClick={() => onRemoveClick()}>
               <TrashIcon />
             </button>

@@ -12,7 +12,7 @@ export const Accordion = ({ title, children }: PropsWithChildren<AccordionProps>
   const { contentHeight } = useAccordionHeight(children, childrenRef);
 
   return (
-    <div className='w-72'>
+    <div className='w-full'>
       <div
         className={classNames(
           "flex items-center justify-between gap-2 w-full py-2 px-4",
