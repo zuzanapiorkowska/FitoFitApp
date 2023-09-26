@@ -1,14 +1,15 @@
+import classNames from "classnames";
 import { useContext, useEffect } from "react";
 import { useState } from "react";
 import { useForm, FormProvider } from "react-hook-form";
 import { WorkoutsContext } from "../../pages/_app";
 import { IWorkout } from "../../types/types";
+import { inputClassName, scrollbarClassName } from "../../utils/classNames";
 import { WorkoutType } from "../WorkoutsList/WorkoutsList.interface";
 import { DateInput } from "./inputs/DateInput";
 import { DistanceInput } from "./inputs/DistanceInput";
 import { DurationInput } from "./inputs/DurationInput";
 import { InputField } from "./inputs/InputField";
-import { inputClassName } from "./utils";
 import { WorkoutFormButton } from "./WorkoutFormButton";
 import { WorkoutTypeSelect } from "./WorkoutTypeSelect";
 
@@ -38,7 +39,11 @@ export default function WorkoutForm() {
   }
 
   return (
-    <div className='w-full bg-white bg-opacity-20 p-4 rounded-md h-full overflow-y-auto scrollbar scrollbar-thumb-pinkDark scrollbar-thin'>
+    <div
+      className={classNames(
+        "w-full bg-white bg-opacity-20 p-4 rounded-md h-full",
+        scrollbarClassName
+      )}>
       <h1 className='w-full flex font-bold justify-center'>WORKOUT DETAILS</h1>
       <FormProvider {...methods}>
         <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-2 w-full' noValidate>

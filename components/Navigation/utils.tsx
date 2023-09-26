@@ -1,7 +1,6 @@
 import { AddIcon } from "../icons/AddIcon";
 import { HomeIcon } from "../icons/HomeIcon";
 import { ListIcon } from "../icons/ListIcon";
-import { StatsIcon } from "../icons/StatsIcon";
 import { WeatherIcon } from "../icons/WeatherIcon";
 import { NavItemProps } from "./Navigation.interface";
 

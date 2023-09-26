@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { useFormContext, UseFormRegister } from "react-hook-form";
+import { useFormContext } from "react-hook-form";
 import { TimeParts } from "../../WorkoutsList/utils";
 import { InputField } from "./InputField";
-import { handleMinusKeyDown, inputClassName } from "../utils";
+import { handleMinusKeyDown } from "../utils";
+import { inputClassName } from "../../../utils/classNames";
 
 interface DurationInputProps {
   idx: number;

@@ -1,7 +1,8 @@
 import React from "react";
 import { useFormContext } from "react-hook-form";
+import { inputClassName } from "../../../utils/classNames";
 import { WorkoutType } from "../../WorkoutsList/WorkoutsList.interface";
-import { handleMinusKeyDown, inputClassName } from "../utils";
+import { handleMinusKeyDown } from "../utils";
 import { InputField } from "./InputField";
 
 export interface DistanceInputProps {

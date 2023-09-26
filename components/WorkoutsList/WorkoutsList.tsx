@@ -1,7 +1,9 @@
+import classNames from "classnames";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { useContext } from "react";
 import { WorkoutsContext } from "../../pages/_app";
+import { scrollbarClassName } from "../../utils/classNames";
 import { pastWorkoutsMock } from "./utils";
 import { WorkoutItem } from "./WorkoutItem";
 export const WorkoutsList = () => {
@@ -19,7 +21,7 @@ export const WorkoutsList = () => {
   }, []);
 
   return (
-    <div className='flex flex-col gap-2 max-h-full h-full overflow-y-auto scrollbar scrollbar-thumb-pinkDark scrollbar-thin pr-1'>
+    <div className={classNames("flex flex-col gap-2 max-h-full h-full pr-1", scrollbarClassName)}>
       {myWorkouts.length > 0 &&
         myWorkouts.map((workout, idx) => (
           <WorkoutItem

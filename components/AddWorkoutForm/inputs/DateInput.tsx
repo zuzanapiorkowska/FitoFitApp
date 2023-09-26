@@ -1,6 +1,6 @@
 import React from "react";
 import { useFormContext } from "react-hook-form";
-import { inputClassName } from "../utils";
+import { inputClassName } from "../../../utils/classNames";
 import { InputField } from "./InputField";
 
 export const DateInput = () => {
