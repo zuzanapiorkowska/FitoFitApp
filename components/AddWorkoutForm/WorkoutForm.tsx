@@ -4,15 +4,15 @@ import { useForm, FormProvider } from "react-hook-form";
 import { WorkoutsContext } from "../../pages/_app";
 import { IWorkout } from "../../types/types";
 import { WorkoutType } from "../WorkoutsList/WorkoutsList.interface";
-import { AddWorkoutButton } from "./AddWorkoutButton";
 import { DateInput } from "./inputs/DateInput";
 import { DistanceInput } from "./inputs/DistanceInput";
 import { DurationInput } from "./inputs/DurationInput";
 import { InputField } from "./inputs/InputField";
 import { inputClassName } from "./utils";
+import { WorkoutFormButton } from "./WorkoutFormButton";
 import { WorkoutTypeSelect } from "./WorkoutTypeSelect";
 
-export default function AddWorkoutForm() {
+export default function WorkoutForm() {
   const { myWorkouts, setMyWorkouts } = useContext(WorkoutsContext);
 
   const methods = useForm<IWorkout>({
@@ -21,10 +21,8 @@ export default function AddWorkoutForm() {
   const { register, handleSubmit } = methods;
   async function onSubmit(workout: IWorkout) {
     setMyWorkouts([...myWorkouts, workout]);
-    console.log(workout);
     setTimeout(() => localStorage.setItem("workouts", JSON.stringify(myWorkouts)));
-    console.log(myWorkouts);
-    // location.replace("/myworkouts");
+    location.replace("/myworkouts");
   }
 
   const allDisciplines = Object.values(WorkoutType).map(value => value);
@@ -70,7 +68,7 @@ export default function AddWorkoutForm() {
           <InputField label='Notes'>
             <textarea {...register("notes")} id='notes' className={inputClassName} />
           </InputField>
-          <AddWorkoutButton />
+          <WorkoutFormButton />
         </form>
       </FormProvider>
     </div>

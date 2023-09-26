@@ -3,14 +3,13 @@ import { useFormContext, UseFormRegister } from "react-hook-form";
 import { TimeParts } from "../../WorkoutsList/utils";
 import { InputField } from "./InputField";
 import { inputClassName } from "../utils";
-import { WorkoutType } from "../../WorkoutsList/WorkoutsList.interface";
 
 interface DurationInputProps {
   idx: number;
   durationToEdit?: number;
 }
 
-export function DurationInput({ idx, part, durationToEdit }: DurationInputProps) {
+export function DurationInput({ idx, durationToEdit }: DurationInputProps) {
   const {
     register,
     setValue,

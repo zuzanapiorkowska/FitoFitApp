@@ -1,5 +1,4 @@
 import React, { PropsWithChildren } from "react";
-import { useFormContext } from "react-hook-form";
 import { InputFieldProps } from "../AddWorkoutForm.interface";
 
 export const InputField = ({

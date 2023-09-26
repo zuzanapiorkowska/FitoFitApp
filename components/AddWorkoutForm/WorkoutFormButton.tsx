@@ -1,7 +1,7 @@
 import React from "react";
 import { NextArrowIcon } from "../icons/NextArrowIcon";
 
-export const AddWorkoutButton = () => {
+export const WorkoutFormButton = () => {
   return (
     <button
       className='flex items-center justify-center bg-violetExtraDark hover:bg-violetExtraDarkHover w-full p-2 rounded-lg text-center font-bold text-xs text-white border border-white mt-2'

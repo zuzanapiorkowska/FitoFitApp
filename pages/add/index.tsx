@@ -1,9 +1,9 @@
-import AddWorkoutForm from "../../components/AddWorkoutForm/AddWorkoutForm";
+import WorkoutForm from "../../components/AddWorkoutForm/WorkoutForm";
 
 export const AddWorkoutPage = () => {
   return (
     <div className='flex items-center justify-center h-full w-full md:w-1/2'>
-      <AddWorkoutForm />
+      <WorkoutForm />
     </div>
   );
 };
