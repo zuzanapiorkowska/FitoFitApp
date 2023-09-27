@@ -1,4 +1,4 @@
-import WorkoutForm from "../../components/AddWorkoutForm/WorkoutForm";
+import WorkoutForm from "../../components/WorkoutForm/WorkoutForm";
 
 export const AddWorkoutPage = () => {
   return (
