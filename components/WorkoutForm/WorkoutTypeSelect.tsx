@@ -47,13 +47,14 @@ export function WorkoutTypeSelect({
             onKeyDown={handleInputEnterKeyDown}
             value={chosenDiscipline}
             id='workoutTypeSelect'
+            readOnly
           />
           <div
             className={classNames(
               "z-40 w-full rounded-md border border-salmon text-pinkDark bg-white",
               isDropdownVisible ? "absolute top-9" : "hidden"
             )}>
-            {disciplines.map(type => (
+            {disciplines.map((type, idx) => (
               <button
                 type='button'
                 className='p-2 cursor-pointer block w-full text-left hover:bg-pinkDark hover:bg-opacity-20'
@@ -61,7 +62,8 @@ export function WorkoutTypeSelect({
                   setDiscipline(type);
                   setIsDropdownVisible(false);
                 }}
-                onKeyDown={e => handleOptionEnterKeyDown(e, type)}>
+                onKeyDown={e => handleOptionEnterKeyDown(e, type)}
+                key={idx}>
                 {type}
               </button>
             ))}
