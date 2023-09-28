@@ -52,6 +52,7 @@ export default function WorkoutForm({ onFormSubmit }: { onFormSubmit(workout: IW
           />
 
           <div className='flex flex-col gap-2'>
+            {/* TODO: enable to remove workout part from form */}
             {partialWorkouts.map((part, idx) => {
               return (
                 <div
