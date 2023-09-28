@@ -1,5 +1,4 @@
 import classNames from "classnames";
-import { type } from "cypress/types/jquery";
 import { NextArrowIcon } from "../icons/NextArrowIcon";
 
 export const WorkoutFormButton = () => {

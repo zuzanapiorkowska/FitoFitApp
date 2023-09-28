@@ -33,6 +33,10 @@ export default function WorkoutForm({ onFormSubmit }: { onFormSubmit(workout: IW
     }
   }
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLFormElement>) => {
+    if (e.key === "Enter") e.preventDefault();
+  };
+
   return (
     <div
       className={classNames(
@@ -41,7 +45,11 @@ export default function WorkoutForm({ onFormSubmit }: { onFormSubmit(workout: IW
       )}>
       <h1 className='w-full flex font-bold justify-center'>WORKOUT DETAILS</h1>
       <FormProvider {...methods}>
-        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-2 w-full' noValidate>
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className='flex flex-col gap-2 w-full'
+          noValidate
+          onKeyDown={handleKeyDown}>
           <input hidden {...register("id")} value={Math.random()} />
           <DateInput />
           <WorkoutTypeSelect

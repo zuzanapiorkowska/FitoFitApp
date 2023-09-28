@@ -9,7 +9,7 @@ export const Layout = ({ children }: PropsWithChildren) => {
       <Header />
       <main
         className={classNames(
-          "relative flex w-full h-full h-80 flex-col items-center justify-center p-4 sm:p-8 overflow-hidden",
+          "relative flex w-full h-full flex-col items-center justify-center p-4 sm:p-8 overflow-hidden",
           "bg-pattern bg-main text-white"
         )}>
         {children}

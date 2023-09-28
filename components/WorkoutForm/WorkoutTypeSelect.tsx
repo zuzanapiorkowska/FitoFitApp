@@ -2,8 +2,9 @@ import classNames from "classnames";
 import { InputField } from "./inputs/InputField";
 import { useClickOutside } from "./hooks/useClickOutside";
 import { WorkoutTypeSelectProps } from "./WorkoutForm.interface";
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { inputClassName } from "../../utils/classNames";
+import { WorkoutType } from "../WorkoutsList/WorkoutsList.interface";
 
 export function WorkoutTypeSelect({
   disciplines,
@@ -12,8 +13,29 @@ export function WorkoutTypeSelect({
   onButtonClick,
 }: WorkoutTypeSelectProps) {
   const inputWrapperRef = useRef(null);
+
   const { isElementVisible: isDropdownVisible, setIsElementVisible: setIsDropdownVisible } =
     useClickOutside(inputWrapperRef);
+
+  const handleInputEnterKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") setIsDropdownVisible(true);
+  };
+
+  const handleOptionEnterKeyDown = (
+    e: React.KeyboardEvent<HTMLButtonElement>,
+    type: WorkoutType
+  ) => {
+    if (e.key === "Enter") {
+      setDiscipline(type);
+      setIsDropdownVisible(false);
+    }
+  };
+
+  const handleAddButtonPartEnterKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (e.key === "Enter") {
+      onButtonClick();
+    }
+  };
 
   return (
     <InputField label='Choose workout type' htmlFor='workoutTypeSelect'>
@@ -22,6 +44,7 @@ export function WorkoutTypeSelect({
           <input
             className={inputClassName}
             onClick={() => setIsDropdownVisible(!isDropdownVisible)}
+            onKeyDown={handleInputEnterKeyDown}
             value={chosenDiscipline}
             id='workoutTypeSelect'
           />
@@ -37,7 +60,8 @@ export function WorkoutTypeSelect({
                 onClick={() => {
                   setDiscipline(type);
                   setIsDropdownVisible(false);
-                }}>
+                }}
+                onKeyDown={e => handleOptionEnterKeyDown(e, type)}>
                 {type}
               </button>
             ))}
@@ -47,7 +71,8 @@ export function WorkoutTypeSelect({
           type='button'
           className='text-lg font-bold w-10'
           aria-label={`add new ${chosenDiscipline} workout`}
-          onClick={onButtonClick}>
+          onClick={onButtonClick}
+          onKeyDown={handleAddButtonPartEnterKeyDown}>
           +
         </button>
       </div>

@@ -56,12 +56,13 @@ The the app presents some of my code writing skills, including:
 - Using some of React Hooks: useState, useEffect, useContext (I know others too! ;))
 - Setting up and using popular libraries (Tailwind CSS, React Hook Form, React Testing Library, Jest, Cypress)
 - Using TypeScript features like: interfaces, enums, types, extending types, picking parts of types
+- Writing accessible code
 - Using API calls
 - Using Local Storage
 - Writing tests in React Testing Library using Page Object Model: [Go to RTL tests](https://github.com/zuzanapiorkowska/FitoFitApp/tree/main/components/WorkoutForm/__tests__)
 - Writing tests in Cypress: [Go to e2e tests](https://github.com/zuzanapiorkowska/FitoFitApp/tree/main/cypress)
 - Creating custom hooks: [See useAccordionHeight hook](https://github.com/zuzanapiorkowska/FitoFitApp/blob/main/components/WorkoutsList/hooks/useAccordionHeight.tsx) or [See useClickOutside hook](https://github.com/zuzanapiorkowska/FitoFitApp/blob/main/components/WorkoutForm/hooks/useClickOutside.tsx)
-- Creating basic GitHub actions .yml files: [Go to run-test.yml file](https://github.com/zuzanapiorkowska/FitoFitApp/blob/main/.github/workflows/run-tests.yml)
+- Creating basic GitHub actions .yml files: [Go to run-test.yml file](https://github.com/zuzanapiorkowska/FitoFitApp/blob/main/.github/workflows/run-tests.yml) or [See demo PR with GH actions](https://github.com/zuzanapiorkowska/FitoFitApp/pull/2)
 - Creating Data Adapter: [See data adapter](https://github.com/zuzanapiorkowska/FitoFitApp/blob/main/components/WeatherForecast/DTO/WeatherDataAdapter.ts)
 
 ### Litte explanation:
