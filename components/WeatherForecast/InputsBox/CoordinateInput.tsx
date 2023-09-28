@@ -16,7 +16,7 @@ export function CoordinateInput({ id, label, onChange, errorMessage }: Coordinat
           id={id}
           onChange={onChange}
         />
-        {errorMessage && <p className='text-2xs absolute -bottom-5 text-red-600'>{errorMessage}</p>}
+        {errorMessage && <p className='text-2xs absolute -bottom-4 text-red-600'>{errorMessage}</p>}
       </div>
     </div>
   );

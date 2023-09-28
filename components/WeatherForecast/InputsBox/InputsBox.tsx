@@ -38,7 +38,7 @@ export const InputsBox = ({ onCheckWeatherButtonClick }: InputBoxProps) => {
         <div className='h-10 w-10'>
           <PointerIcon />
         </div>
-        <div className='flex flex-col items-end md:items-center sm:flex-row gap-4'>
+        <div className='flex flex-col items-end md:items-center sm:flex-row gap-5'>
           <CoordinateInput
             id='latitude'
             label='Latitude'
