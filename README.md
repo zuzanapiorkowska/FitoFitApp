@@ -1,6 +1,6 @@
 # FitoFit App
 
-FitoFit App is an app I created for my current recruitment process :) Its purpose is to present the code I write. It's written in Next.js and uses among others:
+FitoFit App is an app I created especially for my current recruitment process :) Its purpose is to present the code I write. It's written in Next.js and uses among others:
 
 - Tailwind CSS,
 - React Testing Library with Jest,
@@ -33,6 +33,7 @@ yarn install
 ## Getting Started
 
 Run the app using one of the commands below:
+
 **npm:**
 
 ```sh
@@ -42,7 +43,7 @@ npm run dev
 **yarn:**
 
 ```sh
-yarn dev
+yarn run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to see the app.
