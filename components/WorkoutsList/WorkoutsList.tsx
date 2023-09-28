@@ -36,7 +36,7 @@ export const WorkoutsList = () => {
         "overflow-y-auto scrollbar scrollbar-thumb-pinkDark scrollbar-thin"
       )}>
       {isMockInfoDisplayed && (
-        <p className='p-2 rounded-md text-xs bg-white bg-opacity-20'>
+        <p className='p-2 rounded-md text-xs bg-white bg-opacity-30 text-violetExtraDark'>
           To present the operation of the application, demo training sessions are displayed. You can
           add your own sessions and remove demo workout items.
         </p>
