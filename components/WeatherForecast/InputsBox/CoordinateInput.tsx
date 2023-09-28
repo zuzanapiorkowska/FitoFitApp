@@ -9,7 +9,13 @@ export function CoordinateInput({ id, label, onChange, errorMessage }: Coordinat
         {label}:
       </label>
       <div className='relative'>
-        <input type='text' placeholder='0' className={inputClassName} id={id} onChange={onChange} />
+        <input
+          type='number'
+          placeholder='0'
+          className={inputClassName}
+          id={id}
+          onChange={onChange}
+        />
         {errorMessage && <p className='text-2xs absolute -bottom-5 text-red-600'>{errorMessage}</p>}
       </div>
     </div>
