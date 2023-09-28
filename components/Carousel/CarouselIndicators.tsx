@@ -1,5 +1,4 @@
 import classNames from "classnames";
-import React from "react";
 import { IndicatorsProps } from "./Carousel.interface";
 
 export const CarouselIndicators = ({ scrollSnaps, selectedIdx, onClick }: IndicatorsProps) => {

@@ -11,6 +11,7 @@ export interface NavListItemProps extends NavItemProps {
   isSpecial: boolean;
   onClick?(): void;
 }
+
 export interface NavigationProps {
   items: NavItemProps[];
 }

@@ -1,6 +1,7 @@
 import { AnchorHTMLAttributes } from "react";
 
 type CarouselButtonType = "prev" | "next";
+
 export interface CarouselButtonProps {
   type: CarouselButtonType;
   onClick(): void;

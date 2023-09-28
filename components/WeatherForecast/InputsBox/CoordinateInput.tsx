@@ -1,4 +1,3 @@
-import React from "react";
 import { inputClassName } from "../../../utils/classNames";
 
 import { CoordinateInputProps } from "../Weather.interface";

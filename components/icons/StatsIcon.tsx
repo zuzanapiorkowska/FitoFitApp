@@ -1,5 +1,3 @@
-import React from "react";
-
 export const StatsIcon = () => (
   <svg
     viewBox='0 -0.5 21 21'

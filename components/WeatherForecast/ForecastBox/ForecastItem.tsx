@@ -1,4 +1,3 @@
-import React from "react";
 import { ForecastItemProps } from "../Weather.interface";
 
 export const ForecastItem = ({ label, value, icon, unit, dataTest }: ForecastItemProps) => (

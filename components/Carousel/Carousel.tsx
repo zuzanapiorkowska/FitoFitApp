@@ -1,10 +1,9 @@
 import useEmblaCarousel from "embla-carousel-react";
-import React, { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { CarouselButton } from "./CarouselButton";
 import { Carouseltem } from "./Carouseltem";
 import { carouselItems } from "./utils";
-import classNames from "classnames";
 import { CarouselIndicators } from "./CarouselIndicators";
 
 export const Carousel = () => {
@@ -35,6 +34,8 @@ export const Carousel = () => {
     emblaApi.on("select", onItemChange);
     emblaApi.on("reInit", onItemChange);
   }, [emblaApi]);
+
+  //TODO:add PauseCarouselButton to improve accessibility
 
   return (
     <div className='flex w-full relative h-full'>

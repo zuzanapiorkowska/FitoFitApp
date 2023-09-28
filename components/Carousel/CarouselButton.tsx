@@ -1,5 +1,4 @@
 import classNames from "classnames";
-import React from "react";
 import { CarouselButtonProps } from "./Carousel.interface";
 import { NextArrowIcon } from "../icons/NextArrowIcon";
 import { PrevArrowIcon } from "../icons/PrevArrowIcon";

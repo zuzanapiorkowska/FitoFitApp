@@ -1,4 +1,3 @@
-import React from "react";
 import { NextArrowIcon } from "../../icons/NextArrowIcon";
 
 export const CheckWetherButton = () => {

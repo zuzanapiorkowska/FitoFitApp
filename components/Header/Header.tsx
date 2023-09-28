@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import { Navigation } from "../Navigation/Navigation";
 import { navigationItems } from "../Navigation/utils";
 

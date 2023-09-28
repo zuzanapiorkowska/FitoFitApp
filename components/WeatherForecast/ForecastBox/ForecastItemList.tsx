@@ -1,4 +1,3 @@
-import React from "react";
 import { HumidityIcon } from "../../icons/HumidityIcon";
 import { PressureIcon } from "../../icons/PressureIcon";
 import { TemperatureIcon } from "../../icons/TemperatureIcon";

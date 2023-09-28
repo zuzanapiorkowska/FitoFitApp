@@ -1,6 +1,3 @@
-import { title } from "process";
-import { Carouseltem } from "./Carouseltem";
-
 export const carouselItems = [
   {
     bgClassName: "bg-bgCarousel1",

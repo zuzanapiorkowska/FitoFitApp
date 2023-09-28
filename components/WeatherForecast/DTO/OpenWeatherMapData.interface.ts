@@ -1,5 +1,3 @@
-import { Coordinates } from "../Weather.interface";
-
 export interface WeatherInfo {
   temp: number;
   pressure: number;

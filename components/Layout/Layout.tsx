@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
 import { Footer } from "../Footer/Footer";
 import { Header } from "../Header/Header";
 

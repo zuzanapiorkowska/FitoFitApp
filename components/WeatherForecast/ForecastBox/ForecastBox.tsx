@@ -1,8 +1,7 @@
-import React from "react";
-import { ForecastListProps } from "../Weather.interface";
+import { ForecastBoxProps } from "../Weather.interface";
 import { ForecastItemsList } from "./ForecastItemList";
 
-export default function ForecastBox({ weatherData }: ForecastListProps) {
+export default function ForecastBox({ weatherData }: ForecastBoxProps) {
   return (
     <div className='min-h-full md:min-h-fit h-fit w-full p-4 sm:p-8 mt-4 bg-opacity-20 bg-violetDark rounded-md flex flex-col items-center gap-4'>
       <div className='bg-white bg-opacity-20 rounded-md py-2 px-4 w-fit'>
