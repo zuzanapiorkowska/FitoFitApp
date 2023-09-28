@@ -12,6 +12,8 @@ The app has been deployed on GitHub pages, so you can easily test it if you want
 
 Trainings added in the app are saved in Local Storage because it's only a frontend app. However, it calls an external weather API in the weather tab.
 
+![Home page](/homePage)
+
 ## Installation
 
 First you have to install all dependencies:
@@ -50,6 +52,7 @@ Open [http://localhost:3000](http://localhost:3000) to see the app.
 The the app presents some of my code writing skills, including:
 
 - Writing components and creating files structure in React and Next.js
+- Using some of React Hooks: useState, useEffect, useContext (I know others too! ;))
 - Setting up and using popular libraries (Tailwind CSS, React Hook Form, React Testing Library, Jest, Cypress)
 - Using TypeScript features like: interfaces, enums, types, extending types, picking parts of types
 - Using API calls
