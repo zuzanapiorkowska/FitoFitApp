@@ -15,6 +15,7 @@ export const Header = () => {
             width='0'
             height='0'
             className='w-10 h-10 pt-1'
+            unoptimized={true}
           />
         </div>
         <span className='font-bold text-lg text-violetDark'>FitoFit</span>
