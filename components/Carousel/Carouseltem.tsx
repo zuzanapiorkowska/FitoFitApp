@@ -11,7 +11,8 @@ export const Carouseltem = ({
 }: CarouselItemProps) => (
   <div
     className={classNames(
-      "bg-carousel1 h-full position-center bg-cover w-full flex-carouselItem flex flex-col sm:flex-row p-16 md:px-28",
+      "flex flex-col h-full w-full flex-carouselItem sm:flex-row p-16 md:px-28",
+      "bg-carousel1 bg-cover position-center",
       bgClassName
     )}>
     <div className='w-full flex flex-col justify-center md:w-3/5 gap-8'>
@@ -20,7 +21,10 @@ export const Carouseltem = ({
     </div>
     <div className='flex items-end sm:items-center md:justify-center md:w-2/5 h-full'>
       <Link
-        className='bg-violetExtraDark hover:bg-violetExtraDarkHover py-4 px-8 rounded-lg text-center font-bold text-md md:text-lg mt-8 md:mt-0 text-white border border-white'
+        className={classNames(
+          "py-4 px-8 rounded-lg text-center font-bold text-md md:text-lg mt-8 md:mt-0",
+          "bg-violetExtraDark hover:bg-violetExtraDarkHover text-white border border-white"
+        )}
         href={href}>
         {linkText}
       </Link>
