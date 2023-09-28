@@ -1,0 +1,36 @@
+name: "Run unit tests"
+
+on:
+  push:
+    branches: ["main"]
+    paths: ["/"]
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  unit-test-jest:
+    name: "Jest"
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.18.1
+          registry-url: "https://registry.npmjs.org"
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+      - run: yarn add
+      - name: Run tests
+        run: yarn run test
