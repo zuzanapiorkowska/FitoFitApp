@@ -2,7 +2,7 @@ export const carouselItems = [
   {
     bgClassName: "bg-bgCarousel1",
     title: "Never forget what you've achieved",
-    subtitle: "Never forget what you've achieved",
+    subtitle: "Record each of your training sessions",
     linkText: "Go to trainings",
     href: "/myworkouts",
   },
