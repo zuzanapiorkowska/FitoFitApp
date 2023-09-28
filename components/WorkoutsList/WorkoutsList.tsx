@@ -2,7 +2,6 @@ import classNames from "classnames";
 import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { WorkoutsContext } from "../../pages/_app";
-import { scrollbarClassName } from "../../utils/classNames";
 import { pastWorkoutsMock } from "./utils";
 import { WorkoutItem } from "./WorkoutItem";
 export const WorkoutsList = () => {
@@ -34,7 +33,7 @@ export const WorkoutsList = () => {
     <div
       className={classNames(
         "flex flex-col gap-2 max-h-full h-full pr-1 max-w-[360px]",
-        scrollbarClassName
+        "overflow-y-auto scrollbar scrollbar-thumb-pinkDark scrollbar-thin"
       )}>
       {isMockInfoDisplayed && (
         <p className='p-2 rounded-md text-xs bg-white bg-opacity-20'>

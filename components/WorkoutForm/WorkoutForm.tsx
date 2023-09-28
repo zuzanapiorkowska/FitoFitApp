@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { useState } from "react";
 import { useForm, FormProvider } from "react-hook-form";
 import { IWorkout } from "../../types/types";
-import { inputClassName, scrollbarClassName } from "../../utils/classNames";
+import { inputClassName } from "../../utils/classNames";
 import { WorkoutType } from "../WorkoutsList/WorkoutsList.interface";
 import { DateInput } from "./inputs/DateInput";
 import { DistanceInput } from "./inputs/DistanceInput";
@@ -41,7 +41,7 @@ export default function WorkoutForm({ onFormSubmit }: { onFormSubmit(workout: IW
     <div
       className={classNames(
         "w-full p-4 rounded-md h-full bg-white bg-opacity-20",
-        scrollbarClassName
+        "overflow-y-auto scrollbar scrollbar-thumb-pinkDark scrollbar-thin"
       )}>
       <h1 className='w-full flex font-bold justify-center'>WORKOUT DETAILS</h1>
       <FormProvider {...methods}>
