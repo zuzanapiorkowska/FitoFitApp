@@ -27,9 +27,9 @@ export const WorkoutItem = ({ workout, onRemoveClick }: WorkoutItemProps) => {
         {workout.parts.map(({ discipline, distanceInMeters, durationInSeconds }, idx) => {
           const duration = new TimeParts(durationInSeconds);
           return (
-            <div key={idx} className='bg-white bg-opacity-20 rounded-md p-2'>
-              <p className='text-violetExtraDark text-sm flex justify-center'>
-                <span className='bg-white bg-opacity-40 rounded-sm px-1'>
+            <div key={idx} className='rounded-md p-2 bg-white bg-opacity-20'>
+              <p className='text-sm flex justify-center text-violetExtraDark'>
+                <span className='rounded-sm px-1 bg-white bg-opacity-40'>
                   {discipline.toUpperCase()}
                 </span>
               </p>
@@ -48,7 +48,7 @@ export const WorkoutItem = ({ workout, onRemoveClick }: WorkoutItemProps) => {
             </div>
           );
         })}
-        <div className='bg-violetDark bg-opacity-20 rounded-md p-2 text-2xs'>
+        <div className='rounded-md p-2 text-2xs bg-violetDark bg-opacity-20'>
           <span className='text-violetExtraDark'>Notes:</span>
           <span className='font-normal'> {workout.notes}</span>
         </div>
