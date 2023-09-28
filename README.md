@@ -1,34 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FitoFit App
+
+FitoFit App is an app I created for my current recruitment process :) Its purpose is to present the code I write. It's written in Next.js and uses among others:
+
+- Tailwind CSS,
+- React Testing Library with Jest,
+- Cypress,
+- React Hook Form.
+
+The app has been deployed on GitHub pages, so you can easily test it if you want without need to download the code to your machine. Here is the link:
+[https://zuzanapiorkowska.github.io/FitoFitApp/](https://zuzanapiorkowska.github.io/FitoFitApp/)
+
+Trainings added in the app are saved in Local Storage because it's only a frontend app. However, it calls an external weather API in the weather tab.
+
+## Installation
+
+First you have to install all dependencies:
+
+**npm:**
+
+```sh
+npm install
+```
+
+**yarn:**
+
+```sh
+yarn install
+```
 
 ## Getting Started
 
-First, run the development server:
+Run the app using one of the commands below:
+**npm:**
 
-```bash
+```sh
 npm run dev
-# or
+```
+
+**yarn:**
+
+```sh
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the app.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## About the code
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+The the app presents some of my code writing skills, including:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Writing components and creating files structure in React and Next.js
+- Setting up and using popular libraries (Tailwind CSS, React Hook Form, React Testing Library, Jest, Cypress)
+- Using TypeScript features like: interfaces, enums, types, extending types, picking parts of types
+- Using API calls
+- Using Local Storage
+- Writing tests in React Testing Library using Page Object Model: [Go to RTL tests](https://github.com/zuzanapiorkowska/FitoFitApp/tree/main/components/WorkoutForm/__tests__)
+- Writing tests in Cypress: [Go to e2e tests](https://github.com/zuzanapiorkowska/FitoFitApp/tree/main/cypress)
+- Creating custom hooks: [See useAccordionHeight hook](https://github.com/zuzanapiorkowska/FitoFitApp/blob/main/components/WorkoutsList/hooks/useAccordionHeight.tsx) or [See useClickOutside hook](https://github.com/zuzanapiorkowska/FitoFitApp/blob/main/components/WorkoutForm/hooks/useClickOutside.tsx)
+- Creating basic GitHub actions .yml files: [Go to run-test.yml file](https://github.com/zuzanapiorkowska/FitoFitApp/blob/main/.github/workflows/run-tests.yml)
+- Creating Data Adapter: [See data adapter](https://github.com/zuzanapiorkowska/FitoFitApp/blob/main/components/WeatherForecast/DTO/WeatherDataAdapter.ts)
 
-## Learn More
+### Litte explanation:
 
-To learn more about Next.js, take a look at the following resources:
+I didn't add .env file to .gitignore because:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- this env (the only one in the project) is exposed as part of the request url anyway
+- I wanted the app to work properly after deploying it on GitHub paes
