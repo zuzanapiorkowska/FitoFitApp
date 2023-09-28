@@ -21,11 +21,8 @@ export function WorkoutTypeSelect({
     if (e.key === "Enter") setIsDropdownVisible(true);
   };
 
-  const handleOptionEnterKeyDown = (
-    e: React.KeyboardEvent<HTMLButtonElement>,
-    type: WorkoutType
-  ) => {
-    if (e.key === "Enter") {
+  const handleOptionKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>, type: WorkoutType) => {
+    if (e.key === "Enter" || e.key === "") {
       setDiscipline(type);
       setIsDropdownVisible(false);
     }
@@ -62,7 +59,7 @@ export function WorkoutTypeSelect({
                   setDiscipline(type);
                   setIsDropdownVisible(false);
                 }}
-                onKeyDown={e => handleOptionEnterKeyDown(e, type)}
+                onKeyDown={e => handleOptionKeyDown(e, type)}
                 key={idx}>
                 {type}
               </button>
