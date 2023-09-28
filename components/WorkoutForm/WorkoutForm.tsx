@@ -36,7 +36,7 @@ export default function WorkoutForm({ onFormSubmit }: { onFormSubmit(workout: IW
   return (
     <div
       className={classNames(
-        "w-full bg-white bg-opacity-20 p-4 rounded-md h-full",
+        "w-full p-4 rounded-md h-full bg-white bg-opacity-20",
         scrollbarClassName
       )}>
       <h1 className='w-full flex font-bold justify-center'>WORKOUT DETAILS</h1>
@@ -58,7 +58,7 @@ export default function WorkoutForm({ onFormSubmit }: { onFormSubmit(workout: IW
                 <div
                   key={idx}
                   data-testid={`${part}-form`}
-                  className='bg-pinkDark bg-opacity-30 w-full p-2 rounded-md flex flex-col gap-2'>
+                  className='w-full p-2 rounded-md flex flex-col gap-2 bg-pinkDark bg-opacity-30'>
                   <p className='text-center text-sm font-bold'>{part.toUpperCase()}</p>
                   <input hidden {...register(`parts.${idx}.discipline`)} value={discipline} />
                   <DistanceInput part={part} idx={idx} />

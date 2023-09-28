@@ -27,13 +27,13 @@ export function WorkoutTypeSelect({
           />
           <div
             className={classNames(
-              "bg-white z-40 w-full rounded-md border border-salmon text-pinkDark",
+              "z-40 w-full rounded-md border border-salmon text-pinkDark bg-white",
               isDropdownVisible ? "absolute top-9" : "hidden"
             )}>
             {disciplines.map(type => (
               <button
                 type='button'
-                className='p-2 hover:bg-pinkDark hover:bg-opacity-20 cursor-pointer block w-full text-left'
+                className='p-2 cursor-pointer block w-full text-left hover:bg-pinkDark hover:bg-opacity-20'
                 onClick={() => {
                   setDiscipline(type);
                   setIsDropdownVisible(false);
@@ -47,12 +47,7 @@ export function WorkoutTypeSelect({
           type='button'
           className='text-lg font-bold w-10'
           aria-label={`add new ${chosenDiscipline} workout`}
-          onClick={() => {
-            onButtonClick();
-            // setTimeout(() => {
-            //   clearErrors();
-            // }, 0);
-          }}>
+          onClick={onButtonClick}>
           +
         </button>
       </div>

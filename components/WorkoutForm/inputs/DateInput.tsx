@@ -6,7 +6,6 @@ import { InputField } from "./InputField";
 export const DateInput = () => {
   const {
     register,
-    setValue,
     formState: { errors },
   } = useFormContext();
 

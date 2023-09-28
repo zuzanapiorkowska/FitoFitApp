@@ -1,4 +1,4 @@
-import { HTMLAttributes, LabelHTMLAttributes } from "react";
+import { LabelHTMLAttributes } from "react";
 import { WorkoutType } from "../WorkoutsList/WorkoutsList.interface";
 
 export interface InputFieldProps extends Pick<LabelHTMLAttributes<HTMLLabelElement>, "htmlFor"> {
