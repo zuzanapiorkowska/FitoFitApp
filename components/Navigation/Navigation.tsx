@@ -27,7 +27,7 @@ export const Navigation = ({ items }: NavigationProps) => {
           <BurgerMenuIcon />
         </button>
         {isMobileNavVisible && (
-          <div className='flex flex-col w-full absolute right-9 z-40 p-2 gap-1 bg-white rounded-md border-2 border-violetDark'>
+          <div className='flex flex-col w-full absolute right-9 z-40 p-2 gap-1 rounded-md bg-white border-2 border-violetDark'>
             {items.map((item, idx) => (
               <NavigationItem
                 {...item}
