@@ -12,7 +12,7 @@ The app has been deployed on GitHub pages, so you can easily test it if you want
 
 Trainings added in the app are saved in Local Storage because it's only a frontend app. However, it calls an external weather API in the weather tab.
 
-![Home page](/homePage)
+![Home page](https://github.com/zuzanapiorkowska/FitoFitApp/blob/main/public/homePage.png?raw=true)
 
 ## Installation
 
