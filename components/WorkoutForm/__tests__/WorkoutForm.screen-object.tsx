@@ -4,6 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { WorkoutType } from "../../WorkoutsList/WorkoutsList.interface";
 
 export const onFormSubmitMock = jest.fn();
+
 export class WorkoutFormPageObject {
   get dateInput() {
     return screen.getByLabelText("Date");
@@ -41,17 +42,8 @@ export class WorkoutFormPageObject {
   workoutTypeSelectItem(part: WorkoutType) {
     return screen.getByRole("button", { name: part });
   }
-  clickWorkoutTypeSelectItem(part: WorkoutType) {
-    userEvent.click(this.workoutTypeSelectItem(part));
-  }
-  clickWorkoutTypeSelect() {
-    userEvent.click(this.workoutTypeSelect);
-  }
   partForm(part: WorkoutType): HTMLDivElement {
     return screen.getByTestId(`${part}-form`);
-  }
-  clickAddWorkoutPartButton(part: WorkoutType): void {
-    userEvent.click(this.addWorkoutPartButton(part));
   }
   chooseDate(date: string) {
     //userEvent.type() doesn't support input with type "date"
@@ -71,6 +63,15 @@ export class WorkoutFormPageObject {
   }
   typeInNotesTextArea(notes: string) {
     userEvent.type(this.notesTextArea, notes);
+  }
+  clickWorkoutTypeSelectItem(part: WorkoutType) {
+    userEvent.click(this.workoutTypeSelectItem(part));
+  }
+  clickWorkoutTypeSelect() {
+    userEvent.click(this.workoutTypeSelect);
+  }
+  clickAddWorkoutPartButton(part: WorkoutType): void {
+    userEvent.click(this.addWorkoutPartButton(part));
   }
   clickSubmitButton() {
     userEvent.click(this.submitButton);
