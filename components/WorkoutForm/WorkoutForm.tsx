@@ -1,8 +1,6 @@
 import classNames from "classnames";
-import { useContext, useEffect } from "react";
 import { useState } from "react";
 import { useForm, FormProvider } from "react-hook-form";
-import { WorkoutsContext } from "../../pages/_app";
 import { IWorkout } from "../../types/types";
 import { inputClassName, scrollbarClassName } from "../../utils/classNames";
 import { WorkoutType } from "../WorkoutsList/WorkoutsList.interface";
@@ -13,16 +11,13 @@ import { InputField } from "./inputs/InputField";
 import { WorkoutFormButton } from "./WorkoutFormButton";
 import { WorkoutTypeSelect } from "./WorkoutTypeSelect";
 
-export default function WorkoutForm() {
-  const { myWorkouts, setMyWorkouts } = useContext(WorkoutsContext);
-
+export default function WorkoutForm({ onFormSubmit }: { onFormSubmit(workout: IWorkout): void }) {
   const methods = useForm<IWorkout>({
     defaultValues: { id: "0", date: new Date(), parts: [], notes: "" },
   });
   const { register, handleSubmit } = methods;
   async function onSubmit(workout: IWorkout) {
-    setMyWorkouts([...myWorkouts, workout]);
-    setTimeout(() => localStorage.setItem("workouts", JSON.stringify(myWorkouts)));
+    onFormSubmit(workout);
     location.replace("/myworkouts");
   }
 
@@ -61,6 +56,7 @@ export default function WorkoutForm() {
               return (
                 <div
                   key={idx}
+                  data-testid={`${part}-form`}
                   className='bg-pinkDark bg-opacity-30 w-full p-2 rounded-md flex flex-col gap-2'>
                   <p className='text-center text-sm font-bold'>{part.toUpperCase()}</p>
                   <input hidden {...register(`parts.${idx}.discipline`)} value={discipline} />
@@ -70,7 +66,7 @@ export default function WorkoutForm() {
               );
             })}
           </div>
-          <InputField label='Notes'>
+          <InputField label='Notes' htmlFor='notes'>
             <textarea {...register("notes")} id='notes' className={inputClassName} />
           </InputField>
           <WorkoutFormButton />

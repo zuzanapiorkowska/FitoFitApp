@@ -16,13 +16,14 @@ export function WorkoutTypeSelect({
     useClickOutside(inputWrapperRef);
 
   return (
-    <InputField label='Choose workout type'>
+    <InputField label='Choose workout type' htmlFor='workoutTypeSelect'>
       <div className='flex w-full'>
         <div className='relative w-full' ref={inputWrapperRef}>
           <input
             className={inputClassName}
             onClick={() => setIsDropdownVisible(!isDropdownVisible)}
             value={chosenDiscipline}
+            id='workoutTypeSelect'
           />
           <div
             className={classNames(
@@ -31,7 +32,6 @@ export function WorkoutTypeSelect({
             )}>
             {disciplines.map(type => (
               <button
-                aria-label={`add new ${type} workout`}
                 type='button'
                 className='p-2 hover:bg-pinkDark hover:bg-opacity-20 cursor-pointer block w-full text-left'
                 onClick={() => {
@@ -46,6 +46,7 @@ export function WorkoutTypeSelect({
         <button
           type='button'
           className='text-lg font-bold w-10'
+          aria-label={`add new ${chosenDiscipline} workout`}
           onClick={() => {
             onButtonClick();
             // setTimeout(() => {

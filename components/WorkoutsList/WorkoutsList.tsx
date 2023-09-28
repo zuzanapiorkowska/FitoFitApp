@@ -1,6 +1,5 @@
 import classNames from "classnames";
-import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { WorkoutsContext } from "../../pages/_app";
 import { scrollbarClassName } from "../../utils/classNames";

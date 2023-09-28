@@ -36,6 +36,7 @@ export function DurationInput({ idx, durationToEdit }: DurationInputProps) {
   return (
     <InputField
       label='Duration'
+      htmlFor='duration'
       errorMessage={
         errors.parts &&
         errors.parts[idx] &&
@@ -93,6 +94,8 @@ export function DurationInput({ idx, durationToEdit }: DurationInputProps) {
               message: "Min duration required is 1s",
             },
           })}
+          id='duration'
+          type='number'
         />
       </div>
     </InputField>
