@@ -5,9 +5,9 @@ import { navigationItems } from "../Navigation/utils";
 
 export const Header = () => {
   return (
-    <div className='flex w-full h-fit text-green-400 px-8 py-4 items-center gap-2 justify-between'>
+    <div className='flex w-full h-fit px-8 py-4 items-center gap-2 justify-between text-green-400'>
       <Link href='/' aria-label='Go to homepage' className='flex items-center justify-center gap-2'>
-        <div className='rounded-full bg-violetDark p-2 flex items-center h-fit min-w-fit justify-center'>
+        <div className='rounded-full p-2 flex items-center h-fit min-w-fit justify-center bg-violetDark'>
           <Image
             src='/logo.png'
             alt='logo'
@@ -17,7 +17,7 @@ export const Header = () => {
             className='w-10 h-10 pt-1'
           />
         </div>
-        <span className='font-bold text-violetDark text-lg'>FitoFit</span>
+        <span className='font-bold text-lg text-violetDark'>FitoFit</span>
       </Link>
       <Navigation items={navigationItems} />
     </div>
