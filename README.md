@@ -1,16 +1,16 @@
 # FitoFit App
 
-FitoFit App is an app I created especially for my current recruitment process :) Its purpose is to present the code I write. It's written in Next.js and uses among others:
+FitoFit App is an app I created for my current recruitment process :) The main purpose of this app is to present my coding skills. It's written in TypeScript, in Next.js and uses among others:
 
 - Tailwind CSS,
 - React Testing Library with Jest,
 - Cypress,
 - React Hook Form.
 
-The app has been deployed on GitHub pages, so you can easily test it if you want without need to download the code to your machine. Here is the link:
+The app has been deployed on GitHub pages, so you can easily test it if you want without downloading the code to your machine. Here is the link:
 [https://zuzanapiorkowska.github.io/FitoFitApp/](https://zuzanapiorkowska.github.io/FitoFitApp/)
 
-Trainings added in the app are saved in Local Storage because it's only a frontend app. However, it calls an external weather API in the weather tab.
+The app allows you to create a record of your cardio workouts and check the weather in a given location. Trainings added in the app are saved in Local Storage because it's only a frontend app. However, it calls an external weather API in the weather tab.
 
 ![Home page](https://github.com/zuzanapiorkowska/FitoFitApp/blob/main/public/homePage.png?raw=true)
 
@@ -50,7 +50,7 @@ Open [http://localhost:3000](http://localhost:3000) to see the app.
 
 ## About the code
 
-The the app presents some of my code writing skills, including:
+The app presents some of my code writing skills, including:
 
 - Writing components and creating files structure in React and Next.js
 - Using some of React Hooks: useState, useEffect, useContext (I know others too! ;))
