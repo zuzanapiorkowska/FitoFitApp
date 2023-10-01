@@ -52,7 +52,7 @@ export const WorkoutsList = () => {
                 })
               );
             }}
-            key={idx}
+            key={workout.id}
           />
         ))}
     </div>
